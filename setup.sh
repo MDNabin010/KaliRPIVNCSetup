@@ -1,18 +1,18 @@
 #!/bin/sh
 # KaliRPIVNCSetup
 # This script will auto setup vncserver in Kali Linux Raspberry Pi 3 for VNC session
-# Author - Anil Parashar
+ Parashar
 # Version 1.2
 # www.techchip.net
-# www.youtube.com/techchipnet
-clear
+
+
 /bin/cat <<'Techchip'
  _______        _      _____ _     _
-|__   __|      | |    / ____| |   (_)
+|__   __|      | |    /   (_)
    | | ___  ___| |__ | |    | |__  _ _ __
    | |/ _ \/ __| '_ \| |    | '_ \| | '_ \
    | |  __/ (__| | | | |____| | | | | |_) |
-   |_|\___|\___|_| |_|\_____|_| |_|_| .__/
+\___|_| |_|\ .__/
                                     | |
     Your True Tech Navigator        |_|.net
 www.techchip.net | youtube.com/techchipnet
@@ -24,15 +24,15 @@ read -p "Do you want update your system (Highly Recommended) (Y/N)? " ans
 if [ $ans = "y" ] || [ $ans = "Y" ]
 then
   echo "Updating package index.."
-  sudo apt-get update -y
-  echo "Updating old packages.."
+  sudo apt-get u
+.."
   sudo apt-get upgrade -y
 fi
-if [ ! -f ~/.vnc/passwd ]
+if [ ! -f ~/.v ]
 then
 echo "Setup VNC Server... "
 echo "Enter password for VNC Server "
-vncserver
+vn
 else
 read -p "Do you want change your VNC server Password[Y/N ] " tc_vncpass
 	if [ $tc_vncpass = "y" ] || [ $tc_vncpass = "Y" ]
@@ -48,7 +48,8 @@ cd /etc/init.d/
 if [ -f techchipvncsetup ]
 then
 rm techchipvncsetup
-update-rc.d techchipvncsetup remove
+update-
+ove
 fi
 echo "#!/bin/sh
 ### BEGIN INIT INFO
@@ -84,7 +85,7 @@ echo "Wait..."; sleep 2;
 chmod +x techchipvncsetup
 update-rc.d techchipvncsetup defaults
 echo "Congratulation your VNC auto start setup successfully completed"
-read -p "Do you want to restart your RPI (y/n)?: " tc_reboot
+ (y/n)?: " tc_reboot
 if [ $tc_reboot = "y" ] || [ $tc_reboot = "Y" ]; then
 echo "Don't forget subscribe TechChip YouTube channel"
 echo "Thank You : Anil Parashar"; sleep 5;
